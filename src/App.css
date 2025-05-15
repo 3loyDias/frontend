@@ -1,38 +1,70 @@
 .App {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+  background-color: #121212; 
+  color: #e0e0e0; 
+}
+
+
+.App-header {
+  background-color: #1a1a1a;
+  padding: 20px 0;
+  color: white;
+  box-shadow: 0 5px 15px black; 
+  border-bottom: 3px solid #444;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* O texto do título no cabeçalho */
+.App-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255); 
+  letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* A parte principal onde fica o conteúdo */
+main {
+  flex: 1; 
+  padding: 30px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Rodapé no fundo da página */
+footer {
+  padding: 15px;
+  background-color: #1a1a1a;
+  color: #999;
+  font-size: 14px;
+  border-top: 3px solid #444;
+  text-align: center;
+}
+
+/* Links dentro do rodapé */
+footer a {
+  color: rgb(255, 255, 255); 
+  text-decoration: none;
+}
+
+
+footer a:hover {
+  color: rgb(216, 216, 216); 
+  font-weight: bold;
+}
+
+.copyright {
+  color: #666;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Responsividade para telemóveis pequenos */
+@media (max-width: 600px) {
+  .App-header h1 {
+    font-size: 24px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} 

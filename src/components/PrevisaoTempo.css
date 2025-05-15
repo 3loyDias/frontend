@@ -1,0 +1,139 @@
+
+.previsao-container {
+  max-width: 100%;
+  margin: 0 auto; 
+  color: #e0e0e0;
+}
+
+/* título principal */
+.previsao-container h2 {
+  color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+
+.previsoes-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
+}
+
+/* cartão que mostra o tempo */
+.previsao-card {
+  background-color: #1e1e1e;
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border: 2px solid #333;
+}
+
+.previsao-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); 
+  border-color: #ffffff; 
+  transition: all 0.3s; 
+}
+
+.previsao-card-header {
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* título de cada cartão */
+.previsao-card h3 {
+  color: rgb(245, 245, 245); 
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.data-previsao {
+  font-size: 14px;
+  color: #aaa;
+  display: block;
+}
+
+.icone-tempo {
+  font-size: 50px; 
+  text-align: center;
+  margin: 20px 0;
+}
+
+.previsao-detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.temperatura, .condicao, .precipitacao {
+  display: flex;
+  justify-content: space-between; 
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+}
+
+.temp-label, .condicao-label, .precip-label {
+  font-weight: bold;
+  color: #aaa;
+}
+
+.temp-min {
+  color: #fafafa; 
+  font-weight: bold;
+}
+
+.temp-separator {
+  color: #666;
+}
+
+.temp-valor {
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+.erro {
+  text-align: center;
+  color: red;
+  background-color: #300;
+  padding: 20px;
+  border-radius: 8px;
+  border: 3px solid red;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.erro button {
+  background-color: #600;
+  border: 2px solid red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.erro button:hover {
+  background-color: red;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #333;
+  border-top: 5px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
